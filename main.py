@@ -1,48 +1,22 @@
-
-# def cread_new_data():
-    
-  
-# def read_new_data():
-
-# def update_data():  
-
-# def delete_data():
-    
+from Code import menu, processor_json
 
 
-
-
-# Berapa anggota pertim (2,3,4)
-
-#  Output : 
-#  Kelompok [n] : name : nim
-
-# make a CRUD
-# type file txt,json, csv atau apa gua bingung
-# ===== CLI KELOMPOK =====
-# 1. Tambah anggota
-# 2. Lihat anggota
-# 3. Ubah anggota
-# 4. Hapus anggota
-# 5. Bagi kelompok
-# 6. Keluar
-# Pilih menu:
-
-# function pembagian kelompok
+   
 def main():
     while True:
-        print('===== CLI KELOMPOK =====')
-        print('1. Tambah anggota')
-        print('2. Lihat anggota')
-        print('3. Ubah anggota')
-        print('4. Hapus anggota')
-        print('5. Bagi kelompok') # ini buat new file json 
-        print('6. Lihat Kelompok') # disini dia milih file mana dan terus ke kelompok yang mana gitu 
-        print('7. Hapus Kelompok') # ini juga sama konsepnya kaya liat kelompok
-        print('8. Ubah Kelomok')
-        chose_Menu = input('Pilih menu : ')
+        print("===== CLI KELOMPOK =====")
+        data_menu = processor_json.read_json("data/menu-list.json")
+        # print("Menu:", data_menu)
+    
+        for no, name in data_menu.items():
+            print(f"{no}. {name}")
+        chose_menu = input("Pilih menu: ")
+        if chose_menu not in data_menu:
+            print(f"Anda memilih menu yang tidak tersedia. Silakan pilih menu yang tersedia.")
+        if chose_menu == "0":
+            print("Terima kasih telah menggunakan program ini.")
+            exit()
         
-        
-main()
-
-# inikan format .json berarti harus kita fetching datanya
+    
+if __name__ == "__main__":
+    main()
