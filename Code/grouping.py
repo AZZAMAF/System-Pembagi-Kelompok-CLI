@@ -52,4 +52,5 @@ def grouping_data():
             final_data_group = shuffle_data(rule_spread_group)
             name_file_input = input("Masukkan nama file untuk menyimpan data grouping (contoh: group-4.json): ")
             add_new_file_group(name_file_input, final_data_group)
-
+        case _:
+            print("Pilihan tidak valid. Silakan pilih jumlah mahasiswa per kelompok yang tersedia (3 / 4 / 6).")
