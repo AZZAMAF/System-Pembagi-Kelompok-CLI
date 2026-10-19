@@ -1,4 +1,4 @@
-from Code import menu, processor_json
+from Code import menu, processor_json, grouping
 
 def main():
     while True:
@@ -14,7 +14,7 @@ def main():
                 break
             case "1":
                 print("Menu 1 dipilih.")
-                
+                grouping.grouping_data()
             case "2":
                 print("Menu 2 dipilih.")
             case "3":
