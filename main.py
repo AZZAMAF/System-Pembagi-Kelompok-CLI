@@ -17,6 +17,7 @@ def main():
                 grouping.grouping_data()
             case "2":
                 print("Menu 2 dipilih.")
+                grouping.lihat_kelompok()
             case "3":
                 print("Menu 3 dipilih.")
             case "4":
