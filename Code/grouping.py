@@ -60,3 +60,31 @@ def grouping_data():
         case _:
             print("Pilihan tidak valid. Silakan pilih jumlah mahasiswa per kelompok yang tersedia (3 / 4 / 6).")
 
+<<<<<<< HEAD
+=======
+#---------- UBAY
+
+
+# 2. Fungsi utama untuk melihat/cek isi kelompok
+def lihat_kelompok():
+    
+    nama_file = input("Masukkan nama file grouping (sama seperti saat menyimpan): ")
+    data_group = processor_json.read_json("data/output/" + nama_file + ".json")
+   
+    nomor = int(input("Masukkan nomor kelompok: "))
+
+    # Cari kelompok yang nomornya sama dengan input (looping)
+    for kelompok in data_group:
+        if kelompok["group"] == nomor:
+            print(f"\nKelompok {nomor}")
+            # enumerate dipakai untuk membuat nomor urut 1, 2, 3, ...
+            for urutan, mhs in enumerate(kelompok["members"], 1):
+                print(f"{urutan}. {mhs['nama']} - {mhs['nim']}")
+            return
+
+    # Kalau perulangan selesai dan tidak ketemu, berarti nomor kelompok tidak ada
+    print("Kelompok tidak ditemukan.")
+
+
+lihat_kelompok()
+>>>>>>> 9afd0213e1beb182616e56a7161e18225d360a55
