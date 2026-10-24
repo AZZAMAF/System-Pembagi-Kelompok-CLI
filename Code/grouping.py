@@ -60,8 +60,7 @@ def grouping_data():
         case _:
             print("Pilihan tidak valid. Silakan pilih jumlah mahasiswa per kelompok yang tersedia (3 / 4 / 6).")
 
-<<<<<<< HEAD
-=======
+
 #---------- UBAY
 
 
@@ -87,4 +86,4 @@ def lihat_kelompok():
 
 
 lihat_kelompok()
->>>>>>> 9afd0213e1beb182616e56a7161e18225d360a55
+
