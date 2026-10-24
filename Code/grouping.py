@@ -36,25 +36,27 @@ def grouping_data():
     #         print(f"{name}")
     # else:
     #     print("Data grouping tidak tersedia karena file mahasiswa-cs.json tidak ditemukan atau tidak valid.")
-    rule_spread_group = int(input("Masukkan jumlah mahasiswa per kelompok: 3 / 4 / 6: "))
-    match rule_spread_group:
+    rule_group = int(input("Masukkan jumlah mahasiswa per kelompok: 3 / 4 / 6: "))
+    # print(f"Jumlah mahasiswa per kelompok: {rule_group}")
+    match rule_group:
         case 3:
             print("Jumlah mahasiswa per kelompok: 3")
-            final_data_group =shuffle_data(rule_spread_group)
+            final_data_group = shuffle_data(rule_group)
             # print(final_data_group)
             name_file_input = input("Masukkan nama file untuk menyimpan data grouping (contoh: group-3.json): ")
             add_new_file_group(name_file_input, final_data_group)
             
         case 4:
             print("Jumlah mahasiswa per group: 4")
-            final_data_group = shuffle_data(rule_spread_group)
+            final_data_group = shuffle_data(rule_group)
             name_file_input = input("Masukkan nama file untuk menyimpan data grouping (contoh: group-4.json): ")
             add_new_file_group(name_file_input, final_data_group)
             
         case 6:
             print("Jumlah mahasiswa per group: 6")
-            final_data_group = shuffle_data(rule_spread_group)
+            final_data_group = shuffle_data(rule_group)
             name_file_input = input("Masukkan nama file untuk menyimpan data grouping (contoh: group-4.json): ")
             add_new_file_group(name_file_input, final_data_group)
         case _:
             print("Pilihan tidak valid. Silakan pilih jumlah mahasiswa per kelompok yang tersedia (3 / 4 / 6).")
+
