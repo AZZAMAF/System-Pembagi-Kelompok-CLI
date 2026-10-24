@@ -5,7 +5,7 @@ import json
 
 
 mahasiswa = processor_json.read_json("data/mahasiswa-cs.json")
-output_group = []
+
 def add_new_file_group(filename,data_group):
     with open(f"data/Output/{filename}.json", "w") as f:
         json.dump(data_group, f,indent=4)  
@@ -13,14 +13,17 @@ def add_new_file_group(filename,data_group):
 def shuffle_data(spread_rule):
     shuffle_mhs = mahasiswa.copy()
     random.shuffle(shuffle_mhs)
+    output_group = []
     for index, i in enumerate(range(0, len(shuffle_mhs), spread_rule)):
+        # print(range(0, len(shuffle_mhs), spread_rule))
         slice_mahasiswa = shuffle_mhs[i:i + spread_rule]
         data_group = {
             "group": index + 1,
             "members": slice_mahasiswa
         }
-        output_group.append(data_group)
+        output_group.append(data_group) 
     return output_group
+    
     # print("Data grouping mahasiswa:")
     # for group in output_group:
     # # Ambil nama dari setiap dictionary anggota
@@ -38,6 +41,7 @@ def grouping_data():
         case 3:
             print("Jumlah mahasiswa per kelompok: 3")
             final_data_group =shuffle_data(rule_spread_group)
+            # print(final_data_group)
             name_file_input = input("Masukkan nama file untuk menyimpan data grouping (contoh: group-3.json): ")
             add_new_file_group(name_file_input, final_data_group)
             
