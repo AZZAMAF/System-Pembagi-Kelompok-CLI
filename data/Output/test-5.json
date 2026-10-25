@@ -3,27 +3,6 @@
         "group": 1,
         "members": [
             {
-                "nim": "26110300016",
-                "nama": "Shofyanto Qodaery"
-            },
-            {
-                "nim": "26110300008",
-                "nama": "Azkiya Raihana"
-            },
-            {
-                "nim": "26110300001",
-                "nama": "Anugrah Yusuf Rekimsa"
-            },
-            {
-                "nim": "26110300033",
-                "nama": "Sutan Lutfi Frank Richard"
-            }
-        ]
-    },
-    {
-        "group": 2,
-        "members": [
-            {
                 "nim": "26110300022",
                 "nama": "Ryandra Yusuf"
             },
@@ -42,7 +21,7 @@
         ]
     },
     {
-        "group": 3,
+        "group": 2,
         "members": [
             {
                 "nim": "26110300011",
@@ -63,7 +42,7 @@
         ]
     },
     {
-        "group": 4,
+        "group": 3,
         "members": [
             {
                 "nim": "26110300002",
@@ -84,7 +63,7 @@
         ]
     },
     {
-        "group": 5,
+        "group": 4,
         "members": [
             {
                 "nim": "26110300032",
