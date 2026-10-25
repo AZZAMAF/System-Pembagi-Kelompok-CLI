@@ -20,6 +20,7 @@ def main():
                 grouping.lihat_kelompok()
             case "3":
                 print("Menu 3 dipilih.")
+                grouping.remove_group()
             case "4":
                 print("Menu 4 dipilih.")
             case "5":

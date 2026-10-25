@@ -3,69 +3,6 @@
         "group": 1,
         "members": [
             {
-                "nim": "26110300034",
-                "nama": "Muhammad Revan Sanjaya"
-            },
-            {
-                "nim": "26110300021",
-                "nama": "Aditya Bintoro"
-            },
-            {
-                "nim": "26110300029",
-                "nama": "Muhammad Ihdhan Dinurachman"
-            },
-            {
-                "nim": "26110300015",
-                "nama": "Haekal syahputra"
-            }
-        ]
-    },
-    {
-        "group": 2,
-        "members": [
-            {
-                "nim": "26110300030",
-                "nama": "Muhammad Rafie Fahmy"
-            },
-            {
-                "nim": "26110300005",
-                "nama": "Ataya Nafis Rizqulah"
-            },
-            {
-                "nim": "26110300013",
-                "nama": "Sharim Azhar Siraz"
-            },
-            {
-                "nim": "26110300004",
-                "nama": "Revan Leonell Morthen"
-            }
-        ]
-    },
-    {
-        "group": 3,
-        "members": [
-            {
-                "nim": "26110300027",
-                "nama": "Daitoryo Prabu Arena"
-            },
-            {
-                "nim": "26110300025",
-                "nama": "Mohammad Zidan Azzafran"
-            },
-            {
-                "nim": "26110300018",
-                "nama": "Abdullah Azzam Firdaus"
-            },
-            {
-                "nim": "26110300017",
-                "nama": "Bernardus Rionard L.S"
-            }
-        ]
-    },
-    {
-        "group": 4,
-        "members": [
-            {
                 "nim": "26110300016",
                 "nama": "Shofyanto Qodaery"
             },
@@ -84,7 +21,7 @@
         ]
     },
     {
-        "group": 5,
+        "group": 2,
         "members": [
             {
                 "nim": "26110300022",
@@ -105,7 +42,7 @@
         ]
     },
     {
-        "group": 6,
+        "group": 3,
         "members": [
             {
                 "nim": "26110300011",
@@ -126,7 +63,7 @@
         ]
     },
     {
-        "group": 7,
+        "group": 4,
         "members": [
             {
                 "nim": "26110300002",
@@ -147,7 +84,7 @@
         ]
     },
     {
-        "group": 8,
+        "group": 5,
         "members": [
             {
                 "nim": "26110300032",
@@ -164,27 +101,6 @@
             {
                 "nim": "26110300023",
                 "nama": "Dude Dzaky Fadilla"
-            }
-        ]
-    },
-    {
-        "group": 9,
-        "members": [
-            {
-                "nim": "26110300026",
-                "nama": "Ali Akbar Alhamid"
-            },
-            {
-                "nim": "26110300006",
-                "nama": "Abdul Rouf"
-            },
-            {
-                "nim": "26110300010",
-                "nama": "Muhammad Akbar"
-            },
-            {
-                "nim": "26110300036",
-                "nama": "Zafirah Bintang Maya"
             }
         ]
     }
