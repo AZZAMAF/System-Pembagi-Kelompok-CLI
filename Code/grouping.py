@@ -65,7 +65,7 @@ def grouping_data():
 def show_group():
     
     nama_file = input("Masukkan nama file grouping (sama seperti saat menyimpan): ")
-    data_group = processor_json.read_json("data/output/" + nama_file + ".json")
+    data_group = processor_json.read_json(f"data/Output/{nama_file}.json")
    
     nomor = int(input("Masukkan nomor kelompok: "))
 
