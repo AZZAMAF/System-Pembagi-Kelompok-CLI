@@ -84,6 +84,63 @@ def show_group():
     # Kalau perulangan selesai dan tidak ketemu, berarti nomor kelompok tidak ada
     print("Kelompok tidak ditemukan.")
 
+def update_group():
+    print("\n--- UPDATE KELOMPOK --- (Ketik 'back' untuk kembali)")
+    
+    nama_file = input("Masukkan nama file grouping: ").strip()
+    if nama_file.lower() == "back":
+        print("Kembali ke menu utama...")
+        return
+
+    try:
+        data_group = processor_json.read_json(f"data/Output/{nama_file}.json")
+    except FileNotFoundError:
+        print("❌ File tidak ditemukan.")
+        return
+
+    input_nomor = input("Masukkan nomor kelompok yang ingin diubah: ").strip()
+    if input_nomor.lower() == "back":
+        print("Kembali ke menu utama...")
+        return
+
+    nomor = int(input_nomor)
+
+    for kelompok in data_group:
+        if kelompok["group"] == nomor:
+            print(f"\nKelompok {nomor}")
+            for urutan, mhs in enumerate(kelompok["members"], 1):
+                print(f"{urutan}. {mhs['nama']} ({mhs['nim']})")
+            
+            # Input nomor anggota
+            input_anggota = input("Masukkan nomor anggota yang ingin diubah: ").strip()
+            if input_anggota.lower() == "back":
+                print("Kembali ke menu utama...")
+                return
+                
+            anggota_index = int(input_anggota) - 1
+            
+            if 0 <= anggota_index < len(kelompok["members"]):
+                new_nama = input("Masukkan nama baru: ").strip()
+                if new_nama.lower() == "back":
+                    return
+                    
+                new_nim = input("Masukkan NIM baru: ").strip()
+                if new_nim.lower() == "back":
+                    return
+                
+                # Update data anggota
+                kelompok["members"][anggota_index]["nama"] = new_nama
+                kelompok["members"][anggota_index]["nim"] = new_nim
+                
+                # Simpan perubahan ke file
+                add_new_file_group(nama_file, data_group)
+                print("✅ Data anggota berhasil diperbarui.")
+                return
+            else:
+                print("Nomor anggota tidak valid.")
+                return
+
+    print("Kelompok tidak ditemukan.")
 
 
 
