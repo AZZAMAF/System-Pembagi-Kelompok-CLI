@@ -82,6 +82,43 @@ def show_group():
     print("Kelompok tidak ditemukan.")
 
 def remove_group():
+    # 1. Minta nama file JSON
+    nama_file = input("Masukkan nama file grouping (contoh: group-3): ")
+    path_file = f"data/Output/{nama_file}.json"
+
+    # 2. Baca isi file JSON pakai helper processor_json
+    data_group = processor_json.read_json(path_file)
+
+    if not data_group:
+        print("File tidak ditemukan atau data kosong.")
+        return
+
+    # 3. Minta nomor kelompok yang mau dihapus
+    nomor_hapus = int(input("Masukkan nomor kelompok yang ingin dihapus: "))
+
+    # 4. Filter data: simpan kelompok yang TIDAK dihapus
+    new_data_group = []
+    kelompok_ditemukan = False
+
+    for kelompok in data_group:
+        if kelompok["group"] == nomor_hapus:
+            kelompok_ditemukan = True
+        else:
+            new_data_group.append(kelompok)
+
+    if not kelompok_ditemukan:
+        print(f"Kelompok nomor {nomor_hapus} tidak ditemukan.")
+        return
+
+    # 5. Rapikan ulang nomor kelompok sisanya (1, 2, 3...)
+    for index, kelompok in enumerate(new_data_group, 1):
+        kelompok["group"] = index
+
+    # 6. Simpan kembali data yang sudah di-update
+    add_new_file_group(nama_file, new_data_group)
+    print(
+        f"Berhasil menghapus Kelompok {nomor_hapus} dari file '{nama_file}.json'!\n"
+    )
     print("\n--- HAPUS ANGGOTA KELOMPOK --- (Ketik 'back' untuk kembali)")
     nama_file = input("Masukkan nama file grouping: ").strip()
     
