@@ -17,11 +17,13 @@ def main():
                 grouping.grouping_data()
             case "2":
                 print("Menu 2 dipilih.")
-                grouping.lihat_kelompok()
+                grouping.show_group()
             case "3":
                 print("Menu 3 dipilih.")
+                
             case "4":
                 print("Menu 4 dipilih.")
+                grouping.update_group()
             case "5":
                 print("Menu 5 dipilih.")
             case "6":
