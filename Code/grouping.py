@@ -60,10 +60,7 @@ def grouping_data():
         case _:
             print("Pilihan tidak valid. Silakan pilih jumlah mahasiswa per kelompok yang tersedia (3 / 4 / 6).")
 
-
 #---------- UBAY
-
-
 # 2. Fungsi utama untuk melihat/cek isi kelompok
 def show_group():
     
