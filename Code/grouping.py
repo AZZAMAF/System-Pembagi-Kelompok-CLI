@@ -65,7 +65,7 @@ def grouping_data():
 
 
 # 2. Fungsi utama untuk melihat/cek isi kelompok
-def lihat_kelompok():
+def show_group():
     
     nama_file = input("Masukkan nama file grouping (sama seperti saat menyimpan): ")
     data_group = processor_json.read_json("data/output/" + nama_file + ".json")
