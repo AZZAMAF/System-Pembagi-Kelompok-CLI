@@ -20,7 +20,6 @@ def main():
                 grouping.show_group()
             case "3":
                 print("Menu 3 dipilih.")
-                
             case "4":
                 print("Menu 4 dipilih.")
                 grouping.update_group()

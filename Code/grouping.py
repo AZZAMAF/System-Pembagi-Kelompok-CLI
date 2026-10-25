@@ -85,40 +85,5 @@ def show_group():
     print("Kelompok tidak ditemukan.")
 
 
-# lihat_kelompok()
 
-def update_group():
-    nama_file = input("Masukkan nama file grouping (sama seperti saat menyimpan): ")
-    data_group = processor_json.read_json(f"data/output/{nama_file}.json")
-    
-    nomor = int(input("Masukkan nomor kelompok yang ingin diubah: "))
 
-    # Cari kelompok yang nomornya sama dengan input (looping)
-    for kelompok in data_group:
-        if kelompok["group"] == nomor:
-            print(f"\nKelompok {nomor}")
-            for urutan, mhs in enumerate(kelompok["members"], 1):
-                print(f"{urutan}. {mhs['nama']} - {mhs['nim']}")
-            
-            # Pilih anggota yang ingin diubah
-            anggota_index = int(input("Masukkan nomor anggota yang ingin diubah: ")) - 1
-            
-            if 0 <= anggota_index < len(kelompok["members"]):
-                new_nama = input("Masukkan nama baru: ")
-                new_nim = input("Masukkan NIM baru: ")
-                
-                # Update data anggota
-                kelompok["members"][anggota_index]["nama"] = new_nama
-                kelompok["members"][anggota_index]["nim"] = new_nim
-                
-                # Simpan perubahan ke file
-                add_new_file_group(nama_file, data_group)
-                print("Data anggota berhasil diperbarui.")
-                return
-            else:
-                print("Nomor anggota tidak valid.")
-                return
-
-    print("Kelompok tidak ditemukan.")
-    
-# def remove_group():
