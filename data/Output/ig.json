@@ -3,23 +3,6 @@
         "group": 1,
         "members": [
             {
-                "nim": "26110300034",
-                "nama": "Muhammad Revan Sanjaya"
-            },
-            {
-                "nim": "26110300033",
-                "nama": "Sutan Lutfi Frank Richard"
-            },
-            {
-                "nim": "26110300008",
-                "nama": "Azkiya Raihana"
-            }
-        ]
-    },
-    {
-        "group": 2,
-        "members": [
-            {
                 "nim": "26110300015",
                 "nama": "Haekal syahputra"
             },
@@ -34,7 +17,7 @@
         ]
     },
     {
-        "group": 3,
+        "group": 2,
         "members": [
             {
                 "nim": "26110300004",
@@ -51,7 +34,7 @@
         ]
     },
     {
-        "group": 4,
+        "group": 3,
         "members": [
             {
                 "nim": "26110300025",
@@ -68,7 +51,7 @@
         ]
     },
     {
-        "group": 5,
+        "group": 4,
         "members": [
             {
                 "nim": "26110300027",
@@ -85,7 +68,7 @@
         ]
     },
     {
-        "group": 6,
+        "group": 5,
         "members": [
             {
                 "nim": "26110300003",
@@ -102,7 +85,7 @@
         ]
     },
     {
-        "group": 7,
+        "group": 6,
         "members": [
             {
                 "nim": "26110300018",
@@ -119,7 +102,7 @@
         ]
     },
     {
-        "group": 8,
+        "group": 7,
         "members": [
             {
                 "nim": "26110300007",
@@ -136,7 +119,7 @@
         ]
     },
     {
-        "group": 9,
+        "group": 8,
         "members": [
             {
                 "nim": "26110300019",
@@ -153,7 +136,7 @@
         ]
     },
     {
-        "group": 10,
+        "group": 9,
         "members": [
             {
                 "nim": "26110300036",
@@ -170,7 +153,7 @@
         ]
     },
     {
-        "group": 11,
+        "group": 10,
         "members": [
             {
                 "nim": "26110300006",
@@ -187,7 +170,7 @@
         ]
     },
     {
-        "group": 12,
+        "group": 11,
         "members": [
             {
                 "nim": "26110300029",
