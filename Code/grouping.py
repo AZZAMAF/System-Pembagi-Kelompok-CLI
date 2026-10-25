@@ -119,48 +119,7 @@ def remove_group():
     print(
         f"Berhasil menghapus Kelompok {nomor_hapus} dari file '{nama_file}.json'!\n"
     )
-    print("\n--- HAPUS ANGGOTA KELOMPOK --- (Ketik 'back' untuk kembali)")
-    nama_file = input("Masukkan nama file grouping: ").strip()
     
-    if nama_file.lower() == "back":
-        print("Kembali ke menu utama...")
-        return
-
-    try:
-        data_group = processor_json.read_json(f"data/Output/{nama_file}.json")
-    except FileNotFoundError:
-        print("❌ File tidak ditemukan.")
-        return
-
-    input_nomor = input("Masukkan nomor kelompok: ").strip()
-    if input_nomor.lower() == "back":
-        return
-
-    nomor = int(input_nomor)
-
-    for kelompok in data_group:
-        if kelompok["group"] == nomor:
-            print(f"\nKelompok {nomor}")
-            for urutan, mhs in enumerate(kelompok["members"], 1):
-                print(f"{urutan}. {mhs['nama']} ({mhs['nim']})")
-            
-            input_index = input("Masukkan nomor anggota yang ingin dihapus: ").strip()
-            if input_index.lower() == "back":
-                return
-                
-            anggota_index = int(input_index) - 1
-            
-            if 0 <= anggota_index < len(kelompok["members"]):
-                mhs_dihapus = kelompok["members"].pop(anggota_index)
-                add_new_file_group(nama_file, data_group)
-                print(f"🗑️ Anggota {mhs_dihapus['nama']} ({mhs_dihapus['nim']}) berhasil dihapus!")
-                return
-            else:
-                print("❌ Nomor anggota tidak valid.")
-                return
-
-    print("❌ Kelompok tidak ditemukan.")
-
 def update_group():
     print("\n--- UPDATE KELOMPOK --- (Ketik 'back' untuk kembali)")
     
