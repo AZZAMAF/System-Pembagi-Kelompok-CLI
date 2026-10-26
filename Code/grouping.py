@@ -134,6 +134,10 @@ def update_group():
         print("❌ File tidak ditemukan.")
         return
 
+    if data_group is None:
+        print("❌ File tidak ditemukan atau isi file tidak valid.")
+        return
+
     input_nomor = input("Masukkan nomor kelompok yang ingin diubah: ").strip()
     if input_nomor.lower() == "back":
         print("Kembali ke menu utama...")
@@ -164,7 +168,25 @@ def update_group():
                 if new_nim.lower() == "back":
                     return
                 
-                # Update data anggota
+                # NIM lama milik anggota yang sedang diubah
+                nim_lama = kelompok["members"][anggota_index]["nim"]
+
+                # 🔍 VALIDASI NIM UNIK: Cek seluruh anggota di semua kelompok
+                nim_sudah_ada = False
+                if new_nim != nim_lama:  # Hanya cek jika NIM-nya memang diganti
+                    for g in data_group:
+                        for mhs in g["members"]:
+                            if mhs["nim"] == new_nim:
+                                nim_sudah_ada = True
+                                break
+                        if nim_sudah_ada:
+                            break
+
+                if nim_sudah_ada:
+                    print(f"❌ Error: NIM '{new_nim}' sudah digunakan oleh mahasiswa lain!")
+                    return
+                
+                # Update data anggota jika NIM aman
                 kelompok["members"][anggota_index]["nama"] = new_nama
                 kelompok["members"][anggota_index]["nim"] = new_nim
                 
@@ -177,6 +199,5 @@ def update_group():
                 return
 
     print("Kelompok tidak ditemukan.")
-
 
 
