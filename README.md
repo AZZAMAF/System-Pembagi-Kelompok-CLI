@@ -96,8 +96,10 @@ Belum dikerjakan (masih di PRD v5):
 
 ## Tim
 
-| Nama | Peran |
-|---|---|
-| Abdullah Azzam Firdaus. · `show menu, Create group, Update Group` |
-| Ubay Abdillah | `Show group` |
-| M Fahmi Ramadhan | `Delete group` · testing |
+UAS Programming 1 — Cakrawala University, Kelompok 1.
+
+| Nama | NIM | Peran |
+|---|---|---|
+| Abdullah Azzam Firdaus | 26110300018 | show menu, Create group, Update Group |
+| Ubay Abdillah | 26110300020 | Show group |
+| M Fahmi Ramadhan | 26110300035 | Delete group · testing |
